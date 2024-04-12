@@ -75,3 +75,36 @@ conda init bash
 
 * [Ten Equations](https://www.amazon.com/Ten-Equations-that-Rule-World-ebook/dp/B07Z78T7WJ)
 * [MIT intro algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_prob1/)
+
+
+# My additions:
+1. Add a shebang line to use cli
+2. use chmod +x file_name.py to make the file a command line function
+
+`./file_name.py —help` — should be successful
+`chmod +x file_name.py` — to add permissions 
+```
+(base) MacBook-Pro:heuristics kalyani$ ./my_greedy_coin_using_copilot.py --help
+bash: ./my_greedy_coin_using_copilot.py: Permission denied
+(base) MacBook-Pro:heuristics kalyani$ chmod +x my_greedy_coin_using_copilot.py
+(base) MacBook-Pro:heuristics kalyani$ ./my_greedy_coin_using_copilot.py --help
+Usage: my_greedy_coin_using_copilot.py [OPTIONS] COMMAND [ARGS]...
+
+  Return the minimum number of coins for a given change Example:
+  ./my_greedy_coin_using_copilot.py 0.99
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  dd  Return the minimum number of coins for a given change Example:...
+  dq  Return the minimum number of coins for a given change Example:...
+(base) MacBook-Pro:heuristics kalyani$ ./my_greedy_coin_using_copilot.py dq 0.99
+Your change for 0.99: 
+3 quarter
+2 dime
+(base) MacBook-Pro:heuristics kalyani$ ./my_greedy_coin_using_copilot.py dd 0.99
+Your change for 0.99: 
+9 dime
+```
+
